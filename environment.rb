@@ -8,6 +8,7 @@ File.write('Gemfile', <<-GEMFILE)
 
   gem 'minitest-reporters'
   gem 'minitest-hooks'
+  gem 'minitest-spec-context'
 GEMFILE
 
 system 'bundle install'
