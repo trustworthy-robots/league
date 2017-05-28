@@ -13,7 +13,7 @@ class PlayerDataParser
   def parse
     name, score = self.player_data.match(PLAYER_PATTERN).captures
     Player.new(name, score)
-  rescue ArgumentError
+  rescue
     raise Exceptions::IncorrectPlayerData, self.player_data
   end
 end

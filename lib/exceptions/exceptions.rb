@@ -12,6 +12,16 @@ module Exceptions
     end
   end
 
+  class IncorrectGameData < BaseException
+    def initialize(game_data)
+      @game_data
+    end
+
+    def message
+      "Incorrect game data -- #{@game_data}"
+    end
+  end
+
   class PlayersWithSameName < BaseException
     def initialize(player_name)
       @player_name = player_name
